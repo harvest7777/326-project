@@ -16,7 +16,7 @@
 
 int main(int argc, char *argv[])
 {
-	/* 
-	Your code is here
-	*/
+    // Minimal hello world
+    printf("Hello, World!\n");
+    return 0;
 }
