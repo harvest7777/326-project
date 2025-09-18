@@ -1,7 +1,9 @@
  # Project 1 - Inter-Process Communication
 
 **Authors:** Phu Quach (ID: 029475548) and Ryan Tran (ID: 031190716) 
+
 **Course:** CECS 326 SEC 02 - Operating Systems  
+
 **Assignment:** Group Project 1 - Warm up of Interprocess Communication  
 
 ## Description
