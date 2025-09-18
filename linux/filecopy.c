@@ -78,16 +78,10 @@ int main(int argc, char *argv[])
     return 0;
 }
 
-/**
- * File Copying Logic: This section will contain the logic for reading from the source file and writing
- * to the pipe in the parent process, as well as reading from the pipe and writing to the destination file
- * in the child process.
- */
-void file_copy(const char *source, const char *destination) {
-	return;
-}
-
 void write_to_pipe(int write_fd, FILE *src) {
+	/**
+	 * Read data from a file and write it to the pipe.
+	 */
 	char buffer[BUFFER_SIZE];
 	size_t bytes_read;
 
@@ -98,6 +92,9 @@ void write_to_pipe(int write_fd, FILE *src) {
 }
 
 void read_from_pipe(int read_fd, FILE *dst) {
+	/**
+	 * Read data from the pipe and write it to a file.
+	 */
 	char buffer[BUFFER_SIZE];
 	ssize_t bytes_read;
 
@@ -107,8 +104,11 @@ void read_from_pipe(int read_fd, FILE *dst) {
 	}
 }
 
-const char* get_source_file_name(int argc, char *argv[]) 
-{ if (argc < 2) {
+const char* get_source_file_name(int argc, char *argv[]) { 
+	/**
+	 * Helper method for getting source file name and error checking.
+	 */
+	if (argc < 2) {
 		fprintf(stderr, "Source file name not provided.\n");
 		return NULL;
 	}
@@ -116,6 +116,9 @@ const char* get_source_file_name(int argc, char *argv[])
 }
 
 const char* get_destination_file_name(int argc, char *argv[]) {
+	/**
+	 * Helper method for getting destination file name and error checking.
+	 */
 	if (argc < 3) {
 		fprintf(stderr, "Destination file name not provided.\n");
 		return NULL;
